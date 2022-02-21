@@ -1,12 +1,13 @@
 require 'pry'
-# Write your code here
-
 def reverse_each_word(sentence)
-  sentence_arr = sentence.split
-  reversedArr = sentence_arr.map(&:reverse)
-  reversedArr.join(" ")
-  # sentence.split.map(&:reverse).join(" ")
+  words = sentence.split
+  reversed_words = []
+
+  words.each do |word|
+    reversed_words << word.reverse
+    binding.pry
+  end
+  reversed_words.join(" ")
 end
 
-binding.pry
-0
+puts reverse_each_word("hi there")
